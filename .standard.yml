@@ -1,0 +1,29 @@
+fix: true               # default: false
+parallel: true          # default: false
+format: progress        # default: Standard::Formatter
+ruby_version: 2.6.8     # default: RUBY_VERSION
+default_ignores: false  # default: true
+
+ignore:                 # default: []
+  - '.github/**'
+  - '.idea/**'
+  - '.sublime/**'
+  - '.vscode/**'
+  - 'bin/**'
+  - 'Brew.app/**'
+  - 'bundle/**'
+  - 'Cellar/**'
+  - 'completions/**'
+  - 'docs/**'
+  - 'etc/**'
+  - 'Frameworks/**'
+  - 'include/**'
+  - 'lib/**'
+  - 'Library/**'
+  - 'manpages/**'
+  - 'opt/**'
+  - 'sbin/**'
+  - 'share/**'
+  - 'var/**'
+  - 'test/**/*':
+    - Layout/AlignHash

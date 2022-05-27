@@ -1,0 +1,36 @@
+#require: standard
+#
+#inherit_gem:
+#  standard: config/base.yml
+#
+AllCops:
+  Exclude:
+    - '.github/**'
+    - '.idea/**'
+    - '.sublime/**'
+    - '.vscode/**'
+    - 'bin/**'
+    - 'Brew.app/**'
+    - 'bundle/**'
+    - 'Cellar/**'
+    - 'completions/**'
+    - 'docs/**'
+    - 'etc/**'
+    - 'Frameworks/**'
+    - 'include/**'
+    - 'lib/**'
+    - 'Library/**'
+    - 'manpages/**'
+    - 'opt/**'
+    - 'sbin/**'
+    - 'share/**'
+    - 'var/**'
+  Include:
+    - '.irbrc'
+    - '.pryrc'
+    - 'init.rb'
+    - 'test_require.rb'
+
+Naming/FileName:
+  Enabled: true
+  Exclude: ['Gemfile']

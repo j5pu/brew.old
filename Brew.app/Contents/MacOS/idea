@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd "$(dirname "$0")" || exit
+cd "$(git rev-parse --show-toplevel)" || exit
+. .env
+BREW_DEVELOPMENT=1 "/Applications/IntelliJ IDEA.app/Contents/MacOS/idea" "${PWD}"

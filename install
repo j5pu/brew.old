@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -eu
+
+# brew update also stash changes
+
+./bin/brew update --force --quiet
+chmod -R go-w ./bin/brew/share/zsh 2>/dev/null
+git pull --quiet --tags
+test -z "$(git stash list)" || git stash pop
+
+#brew tap "${BREW_OWNER}/tap"
+sudo chmod -R g+w /Library/Developer /Library/Java /Library/Perl  /Library/Python /Library/Ruby
+sudo chown -R :admin /Library/Developer /Library/Java /Library/Perl /Library/Python /Library/Ruby
